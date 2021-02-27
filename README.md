@@ -36,6 +36,7 @@ the clustering component in more detail, using a random initialization followed 
 initializing the clusters from the expected outputs. 
 
 **Approach:**
+
 _Preprocessing._ A total of 36 patients each performed 2 trials of each hand gesture, making a total of over 4 million
 samples collected. The data was split into 1 trial for training and 1 for testing. To reduced computational complexity,
 only the first 8 patients were used, leaving 551,135 samples total as shown in the program output of cell #72 in
@@ -49,7 +50,7 @@ as shown in the output of cell #7 of Appendix A. The reduced dataset calculated 
 normalized, trimmed dataset using a quick, prepackaged Kmeans model from Sklearn, with the results showing an
 improvement through PCA.
 
-_Training. _The training of the K means model is shown in the output of cell #67 in Appendix A, where the max number of
+_Training. _ The training of the K means model is shown in the output of cell #67 in Appendix A, where the max number of
 iterations is set to 3 and the number of fittings is set to 2 with a tolerance of 0.0005 in order to constrain the program
 output and runtime. The training stage is not optimized, for example using lists to update the cluster means instead of
 data frames. From a theoretical standpoint, the runtime of the training stage takes grows exponentially as the number
