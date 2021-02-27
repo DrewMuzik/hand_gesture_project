@@ -48,9 +48,9 @@ forth. These instances are trimmed from the dataset, leaving 184,911 samples lef
 from {1, 2, 3, 4, 5, 6}, as shown in the program output of cell #74 in the Appendix.  With the unlabeled data discarded and normalized, the dimensionality of the data is then analyzed through principal components analysis (PCA). Calculating the variances in channels, we can see three principal components from the data,
 as shown in the output of cell #7 of Appendix A. The reduced dataset calculated from PCA is then tested against the
 normalized, trimmed dataset using a quick, prepackaged Kmeans model from Sklearn, with the results showing an
-improvement through PCA.
+improvement through PCA. 
 
-_Training. _ The training of the K means model is shown in the output of cell #67 in Appendix A, where the max number of
+_Training._ The training of the K means model is shown in the output of cell #67 in Appendix A, where the max number of
 iterations is set to 3 and the number of fittings is set to 2 with a tolerance of 0.0005 in order to constrain the program
 output and runtime. The training stage is not optimized, for example using lists to update the cluster means instead of
 data frames. From a theoretical standpoint, the runtime of the training stage takes grows exponentially as the number
@@ -71,9 +71,10 @@ model does diverge to a solution, the accuracy is wildly unpredictable due to th
 order to take advantage of the time series nature of the data, a sliding window could be used – leading to the question
 of how many samples to use, with one study looking at 200 samples / window to ensure that enough time is given for
 each gesture (1 second with sample rate at 200Hz) [1]. To ensure that windows aren’t overlapping between patients, it
-would be bests to capture each window while reading in patient trials.
+would be bests to capture each window while reading in patient trials. 
 
-**Findings: **The k-means model showed a notable improvement using the expected classes as initializations. Looking at the
+
+**Findings:** The k-means model showed a notable improvement using the expected classes as initializations. Looking at the
 expected outputs, we can see that both the packaged and custom models were able to extrapolate the 1st class, when
 the hand is at rest. Although accuracy was fairly low, the improvement shows the strength of the clustering algorithm
 exploiting correlations in the data. The improvement in accuracy also shows the susceptibility of the k-means algorithm
