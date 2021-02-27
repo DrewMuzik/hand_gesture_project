@@ -2,7 +2,7 @@
 Quarter Project for Machine Learning Theory - EECS 298 at UCI
 
 _Andrew Muzik
-EECS 298 – ML Theory, Dr. Sanger
+EECS 298 – ML Theory
 UCI, Fall 2020_
 
                                   Machine Learning for Hand Gesture Identification
