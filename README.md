@@ -5,7 +5,7 @@ _Andrew Muzik
 EECS 298 – ML Theory, Dr. Sanger
 UCI, Fall 2020_
 
-                      Machine Learning for Hand Gesture Identification
+                                  Machine Learning for Hand Gesture Identification
 
 **Abstract**- Using the electrical signals generated from muscle activity, patient trials are conducted to classify a number of
 hand gestures while recording the signal measurements. This project explores a cluster approach to classify each hand
@@ -23,7 +23,7 @@ gestures is pictured below in Figure 1.
 
 ![gestures](https://user-images.githubusercontent.com/22182524/109402992-49873480-790f-11eb-8bbf-811daf5535b1.JPG)
 
-Figure 1: MYO Gesture Classes [1].
+                                  Figure 1: MYO Gesture Classes [1].
 
 The MYO armband uses a sample rate of 200Hz, with signals measured on the scale of µV, as shown in the first output of
 Appendix 1, using 8 channels, time and expected output. Many different models – both supervised and unsupervised
@@ -44,10 +44,7 @@ with Euclidean distance between points. To overcome the quantization error, the 
 reduction, as shown in the program output of cell #73 in Appendix A. The class 0 is used to represent unmarked data
 during the trial, which represents the initial and final phases of trials where patients could be stretching, moving and so
 forth. These instances are trimmed from the dataset, leaving 184,911 samples left in the data with expected outputs
-from {1, 2, 3, 4, 5, 6}, as shown in the program output of cell #74 in the Appendix.
-
-With the unlabeled data discarded and normalized, the dimensionality of the data is then analyzed through principal
-components analysis (PCA). Calculating the variances in channels, we can see three principal components from the data,
+from {1, 2, 3, 4, 5, 6}, as shown in the program output of cell #74 in the Appendix.  With the unlabeled data discarded and normalized, the dimensionality of the data is then analyzed through principal components analysis (PCA). Calculating the variances in channels, we can see three principal components from the data,
 as shown in the output of cell #7 of Appendix A. The reduced dataset calculated from PCA is then tested against the
 normalized, trimmed dataset using a quick, prepackaged Kmeans model from Sklearn, with the results showing an
 improvement through PCA.
